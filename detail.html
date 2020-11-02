@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Men'sStore</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-light fixed-top">
+      <div class="container-fluid">
+        <a style="font-family: cursive;" class="navbar-brand" href="#">Men's<span class="text-warning">Store</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span><sup>20</sup>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm. . ." aria-label="Search">
+            <button style="font-family: cursive;" class="btn btn-sm btn-secondary border-light mt-1" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">ÁO THUN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ÁO SƠ MI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ÁO KHOÁC</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog thời trang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Đăng nhập</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Đăng ký</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:" class="nav-link" data-toggle="modal" data-target="#modal-center">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> CART (0)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row mb-5 mt-5">
+            <div class="col-md-7 row">
+              <div class="product-image-detail col-md-12">
+                <img id="image-detail" class="w-100" src="https://product.hstatic.net/1000384897/product/004_a26d7fa5ab2b4fcb9911bf473965e494_master.jpg" alt="">
+              </div>
+              <div class="product-gallary col-md-12">
+                <img onclick="changeUrlImage(this);" class="col-md-2 mt-2" src="https://product.hstatic.net/1000384897/product/004_a26d7fa5ab2b4fcb9911bf473965e494_master.jpg" alt="">
+                <img onclick="changeUrlImage(this);" class="col-md-2 mt-2" src="https://product.hstatic.net/1000384897/product/donal_mickey01_c4d04b61c8fa4bc58ee66f7a5f2ad17d_master.jpg" alt="">
+                <img onclick="changeUrlImage(this);" class="col-md-2 mt-2" src="https://product.hstatic.net/1000384897/product/58373336_435001080648516_7363975742595530752_n_5e2e1708923b4927b16823599e8e546d_master.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-md-5 bg-light p-4">
+              <div class="product-title">
+                <h4>Ao thun nam</h4>
+                <span>SKU: 123 123 123</span>
+              </div>
+              <hr>
+              <div style="font-family: cursive;" class="product-price">
+                <span class="pro-sale p-1 pl-2 pr-2 table-danger">30%</span>
+                <span class="pro-price text-danger">175,000đ</span>
+                <span class="text-danger"><del>250,000</del>đ</span>
+              </div>
+              <hr>
+              <div class="cartmain">
+                <form action="#" method="post">
+                  <input type="hidden" name="pro_id" id="pro_id">
+                  <input style="display: none;" type="radio" id="chk1" name="size" value="S">
+                  <input style="display: none;" type="radio" id="chk2" name="size" value="M">
+                  <input style="display: none;" type="radio" id="chk3" name="size" value="XL">
+                  <input style="display: none;" type="radio" id="chk4" name="size" value="XXL">
+                  <input style="display: none;" type="radio" id="chk5" name="size" value="XXL">
+                  
+                  <label class="btn btn-light pl-3 pr-3 btn-sm" id="lb1" for="chk1">S</label>
+                  <label class="btn btn-light pl-3 pr-3 btn-sm" id="lb2" for="chk2">M</label>
+                  <label class="btn btn-light pl-3 pr-3 btn-sm" id="lb3" for="chk3">XL</label>
+                  <label class="btn btn-light pl-3 pr-3 btn-sm" id="lb4" for="chk4">XXL</label>
+                  <label class="btn btn-light pl-3 pr-3 btn-sm" id="lb5" for="chk5">XXL</label>
+                  <div class="form-group form-inline">
+                    <label class="mr-5" for="usr">Số lượng:</label>
+                    <input type="button" class="form-control" value="-" onclick="minusQuantity();">
+                    <input type="text" class="form-control col-md-3 text-center" id="quantity" name="quantity" value="1">
+                    <input type="button" class="form-control" value="+" onclick="plusQuantity();">
+                  </div>
+                  <button type="submit" class="btn btn-danger w-100 btnAddCard">Thêm vào giỏ hàng</button>
+                </form>
+              </div>
+              <div class="product-description mt-3">
+                <div class="title-bl">
+                  <p>Mô tả</p>
+                </div>
+                <div class="description-content">
+                  <div class="description-productdetail">
+                    <p><span><strong>Áo Thun 8/3 - WMT002</strong></span></p><p>- Chất liệu : Vải TC 4 chiều cao cấp&nbsp;</p><p>- Công nghệ in :&nbsp;<span>sử dụng công nghệ in hiện đại giúp hình in sắc nét, đẹp mắt.</span></p><p>- Size : S, M, L, XL, XXL, XXXL</p><p><span><strong>KHUYẾN MÃI ĐẶT BIỆT&nbsp;</strong></span></p><p>- Mua 2 - 3 áo giảm 5%&nbsp;</p><p>- Mua 4 - 19 áo giảm 10%</p><p>- Mua trên 10 áo giảm 15%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-lg-9 -->
+      </div>
+      <!-- /.row -->
+      <hr>
+      <div class="row rel-product">
+        <div class="col-md-12 text-center">
+          <h2>Sản phẩm liên quan</h2>
+          <hr class="w-25 border border-secondary">
+        </div>
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+        <div class="col-md-2 mt-3 mb-3">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt=""></a>
+            <div class="card-body">
+              <h5>120.000 đ</h5>
+              <p class="card-text">Áo Thun Nam</p>
+            </div>
+          </div>
+        </div>
+        <!-- END -->
+      </div>
+    </div>
+    <!-- /.container -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="modal-center" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Giỏ Hàng</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <tr id="pro1">
+                <td style="width: 20%;">
+                  <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt="">
+                </td>
+                <td style="width: 50%;">
+                  <h6>Áo thun nam giá rẻ</h6>
+                  <p>Size: XXL - Qty: 12</p>
+                </td>
+                <td style="width: 20%;">
+                  <p><small>đ</small>120.000</p>
+                </td>
+                <td style="width: 10%;">
+                  <button rel="pro1" type="button" class="btn btn-sm btn-danger delProInCart" class="close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                </td>
+              </tr>
+              <tr id="pro2">
+                <td style="width: 20%;">
+                  <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUbJACvJcrrXyJA64kfY_v_B2Ww_-HEWnRycP0L7Z9u1crBgCILJaZKdzhkcUEC8frS-OsEik&usqp=CAc" alt="">
+                </td>
+                <td style="width: 50%;">
+                  <h6>Áo thun nam giá rẻ</h6>
+                  <p>Size: XXL - Qty: 12</p>
+                </td>
+                <td style="width: 20%;">
+                  <p><small>đ</small>120.000</p>
+                </td>
+                <td style="width: 10%;">
+                  <button rel="pro2" type="button" class="btn btn-sm btn-danger delProInCart" class="close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-sm btn-secondary">Đi đến giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; HùngStore 2020</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/style.js"></script>
+  </body>
+</html>
